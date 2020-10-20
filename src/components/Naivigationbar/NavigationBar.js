@@ -10,10 +10,10 @@ export const NavigationBar = () => {
             <div className="navBarContainer">
                 
                 <span className="navBarLogo" onClick={() => history.push("/")}>RECEPTHÖRNAN</span>
+                <span className="searchBar"><input></input></span>
                 <span className="navBarRecipe" onClick={() => history.push("/recept")}>Recept och mat</span>
                 <span className="navBarForum" onClick={() => history.push("/")}>Forum</span>
-                <span className="navBarW" onClick={() => history.push("/")}>Work in progress</span>
-                <span className="searchBar"><input></input></span>
+                <span className="navBarW" onClick={() => history.push("/om")}>Om</span>
                 <span className="navBarSignIn" onClick={() => history.push("/loggain")}>Sign In</span>
             </div>
         

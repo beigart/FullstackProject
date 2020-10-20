@@ -1,10 +1,9 @@
 import React from 'react'
 
-export const HomeView = () => {
-
+export const AboutView = () => {
     return (
         <div>
-            <h1>This is the homeview</h1>
+            <h1>This is the about view</h1>
         </div>
     )
 }

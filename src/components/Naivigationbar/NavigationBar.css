@@ -1,8 +1,8 @@
 .navBarContainer {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    background-color: orange;
-    padding: 15px;
+    background-color: #9EE0D9;
+    padding: 17px;
 }
 
 .navBarLogo {
@@ -10,36 +10,35 @@
     cursor: pointer;
     font-size: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: blueviolet;
+    font-style: italic;
 
-}
-
-.navBarRecipe {
-    grid-column: 3;
-    background-color: green;
-    text-align: center;
-}
-
-.navBarForum {
-    grid-column: 4;
-    background-color: hotpink;
-    text-align: center;
-}
-
-.navBarW {
-    grid-column: 5;
-    text-align: center;
-    background-color: yellow;
 }
 
 .searchBar {
+    grid-column: 3;
+}
+
+.navBarRecipe {
+    grid-column: 5;
+    text-align: center;
+    cursor: pointer;
+}
+
+.navBarForum {
+    grid-column: 6;
+    text-align: center;
+    cursor: pointer;
+}
+
+.navBarW {
     grid-column: 7;
+    text-align: center;
+    cursor: pointer;
 }
 
 .navBarSignIn {
     grid-column: 10;
     cursor: pointer;
-    background-color: blue;
 }
 
 

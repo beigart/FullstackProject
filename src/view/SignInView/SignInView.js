@@ -1,6 +1,7 @@
 import React, { useState, useContext} from 'react'
 import { useHistory } from 'react-router-dom'
 import { UserContext } from '../../utils/context/UserContext'
+import './SignInView.css'
 
 export const SignInView = () => {
 
@@ -27,7 +28,7 @@ export const SignInView = () => {
 
 
     return (
-        <div>
+        <div className="signInContainer">
             <h1>Logga in som användare</h1>
             <h2>Vänligen fyll i dina uppgifter</h2>
             <p>Email: </p>

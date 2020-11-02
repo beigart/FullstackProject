@@ -10,13 +10,6 @@ export const SignInView = () => {
     const [loginPassword, setLoginPassword] = useState()
     const [loggedInUser, setLoggedinUser] = useContext(UserContext)
 
-    /*
-    const login = () => {
-        setLoggedinUser(loginEmail)
-        localStorage.setItem('email', loginEmail)
-        alert(loginEmail + " Has logged in")
-    }*/
-
 
     const submitEmail = () => {
         setLoggedinUser(loginEmail)
@@ -36,7 +29,7 @@ export const SignInView = () => {
             <p>Lösenord: </p>
             <input onChange={e => setLoginPassword(e.target.value)} id="pwInput"></input><br></br>
             <button onClick= {() => submitEmail()}>Logga in</button>
-            <h1> {loggedInUser}</h1>
+            <h1>{loggedInUser}</h1>
         </div>
     )
 }

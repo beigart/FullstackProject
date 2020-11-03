@@ -1,19 +1,24 @@
 .footer {
     color: black;
-    background-color:#9ee0d9;
-    padding-top: 3em;
+    padding-top: 1px;
     position: relative;
     bottom: 0;
     width: 100%;
     text-align: center;
+    background: #ff7e5f;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #feb47b, #ff7e5f);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #feb47b, #ff7e5f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 
 .columns {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    padding: 30px;
 }
 
 li {
     list-style: none;
 }
+

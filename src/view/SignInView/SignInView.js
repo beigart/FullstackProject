@@ -2,6 +2,7 @@ import React, { useState, useContext} from 'react'
 import { useHistory } from 'react-router-dom'
 import { UserContext } from '../../utils/context/UserContext'
 import './SignInView.css'
+import { Link } from 'react-router-dom';
 
 export const SignInView = () => {
 
@@ -24,12 +25,12 @@ export const SignInView = () => {
         <div className="signInContainer">
             <h1>Logga in som användare</h1>
             <h2>Vänligen fyll i dina uppgifter</h2>
-            <p>Email: </p>
-            <input onChange={e => setLoginEmail(e.target.value)}  id="emailInput"></input>
-            <p>Lösenord: </p>
-            <input onChange={e => setLoginPassword(e.target.value)} id="pwInput"></input><br></br>
-            <button onClick= {() => submitEmail()}>Logga in</button>
-            <h1>{loggedInUser}</h1>
+            <h4>Email </h4>
+            <input type="text" onChange={e => setLoginEmail(e.target.value)}  className="emailInput"></input>
+            <h4>Lösenord </h4>
+            <input type="password" onChange={e => setLoginPassword(e.target.value)} className="pwInput"></input><br></br>
+            <button className="logInButton" onClick= {() => submitEmail()}>Logga in</button>
+            <p className="register">Inte medlem ännu? Registrera dig <Link to="/register">här</Link></p>
         </div>
     )
 }

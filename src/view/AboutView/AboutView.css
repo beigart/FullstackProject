@@ -1,4 +1,70 @@
 .aboutViewContainer {
-    text-align: center;
-    margin-top: 200px;
+  margin-top: 100px;
+  margin-bottom: 120px;
+  text-align: center;
+}
+
+.contentContainer {
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 4fr;
+}
+
+
+.bbqContainer {
+    grid-column: 1;
+       
+}
+
+.bbqImg {
+    width: 200px;
+    grid-column: 2;
+}
+
+.bbqText {
+    
+   
+}
+
+
+.breakfastContainer {
+ 
+}
+
+.breakfastImg{
+    width: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.cookingContainer {
+    grid-column: 1;
+    grid-row: 3;
+    border: solid black;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.cookingImg {
+    width: 200px;
+}
+
+.friendsContainer {
+    grid-column: 10;
+    grid-row: 4;
+    border: solid black;
+    grid-column-start: 9;
+    grid-column-end: 12;
+}
+
+.friendsImg {
+    width: 200px;
 }

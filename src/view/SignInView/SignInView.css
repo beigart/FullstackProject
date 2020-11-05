@@ -15,7 +15,7 @@
   font-size: 16px;
   border-radius: 13px;
   margin: 45px;
-  width: 20%;
+  width: 200px;
   margin-bottom: 10px;
 }
 
@@ -32,7 +32,7 @@
 
 .emailInput,
 .pwInput {
-  width: 35%;
+  width: 350px;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
@@ -46,4 +46,13 @@
 .emailInput:focus,
 .pwInput:focus {
   border: 3px solid #ff7e5f;
+}
+
+
+@media only screen and (max-width: 500px){
+
+  .emailInput, .pwInput {
+    width: 70%;
+  }
+
 }

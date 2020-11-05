@@ -26,9 +26,9 @@ export const SignInView = () => {
             <h1>Logga in som användare</h1>
             <h2>Vänligen fyll i dina uppgifter</h2>
             <h4>Email </h4>
-            <input type="text" onChange={e => setLoginEmail(e.target.value)}  className="emailInput"></input>
+            <input type="text" onChange={e => setLoginEmail(e.target.value)}  className="emailInput" placeholder="Email"></input>
             <h4>Lösenord </h4>
-            <input type="password" onChange={e => setLoginPassword(e.target.value)} className="pwInput"></input><br></br>
+            <input type="password" onChange={e => setLoginPassword(e.target.value)} className="pwInput" placeholder="Lösenord"></input><br></br>
             <button className="logInButton" onClick= {() => submitEmail()}>Logga in</button>
             <p className="register">Inte medlem ännu? Registrera dig <Link to="/register">här</Link></p>
         </div>

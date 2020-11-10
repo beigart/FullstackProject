@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { connect } from 'react-redux';
+import { setAlert } from '../../actions/alert'
 import "../RegisterView/RegisterView.css";
-import axios from 'axios'
+import PropTypes from 'prop-types'
 
-export const RegisterView = () => {
+
+
+
+export const RegisterView = ({ setAlert }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -19,28 +24,9 @@ export const RegisterView = () => {
   const onSubmit = async e => {
     e.preventDefault();
     if (password !== password2) {
-      console.log("Lösenord stämmer ej överens");
+      setAlert("Lösenord stämmer ej överens", 'danger');
     } else {
-      const newUser = {
-        name,
-        email,
-        password
-      }
-
-      try {
-        const config = {
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        }
-
-        const body = JSON.stringify(newUser);
-
-        const res = await axios.post('routes/api/users', body, config);
-        console.log(res.data)
-      } catch (err) {
-        console.error(err.response.data)
-      }
+      console.log("Funkar")
     }
   };
 
@@ -89,7 +75,7 @@ export const RegisterView = () => {
           />
 
           <br></br>
-          <button className="registerMember">Registrera användare</button>
+          <button className="registerMember" value="Register">Registrera användare</button>
         </div>
       </form>
 
@@ -99,3 +85,9 @@ export const RegisterView = () => {
     </div>
   );
 };
+
+RegisterView.propTypes = {
+  setAlert: PropTypes.func.isRequired
+}
+
+export default connect(null, { setAlert })(RegisterView);

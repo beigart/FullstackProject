@@ -6,13 +6,8 @@ import { Profile } from '../Profile/Profile'
 
 export const NavigationBar = () => {
     const history = useHistory();
-    const [loggedInUser, setLoggedinUser] = useContext(UserContext)
+    
 
-    const userIsLoggedIn = () => {
-        return (loggedInUser) 
-        ? <div className="profile"><Profile /></div>
-        : <span  onClick={() => history.push("/loggain")}>Logga in</span>  
-    }
 
     
     return (
@@ -24,7 +19,7 @@ export const NavigationBar = () => {
                 <span onClick={() => history.push("/recept")}>Recept & mat</span>
                 <span  onClick={() => history.push("/")}>Forum</span>
                 <span  onClick={() => history.push("/om")}>Om</span>
-                {userIsLoggedIn()}
+                <span  onClick={() => history.push("/loggain")}>Logga in</span> 
                 
             </div>
         </div>
